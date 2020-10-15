@@ -11,9 +11,9 @@ const app = express()
 const port = process.env.PORT || 5000
 
 const pusher = new Pusher({
-    appId: '1090437',
-    key: 'f916e35e93197bdf97c7',
-    secret: 'eaed9a2f83e8a3e601c1',
+    appId: 'appId',
+    key: 'key',
+    secret: 'secret',
     cluster: 'eu',
     encrypted: true
 });
@@ -26,7 +26,7 @@ app.use(cors())
 
 
 // db config
-const mongoURI = 'mongodb+srv://admin:PzNuuFvymizMz1sB@cluster0.hccei.mongodb.net/owl_chatDB?retryWrites=true&w=majority'
+const mongoURI = 'mongodb+srv://admin:<password>@cluster0.olxha.mongodb.net/<dbname>?retryWrites=true&w=majority'
 
 mongoose.connect(mongoURI, {
     useCreateIndex: true,
